@@ -5,6 +5,7 @@
   "description": "A Strapi application",
   "scripts": {
     "build": "strapi build",
+    "build:docker": "DOCKER=1 strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
@@ -16,7 +17,6 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.32.0",
     "@strapi/plugin-users-permissions": "5.32.0",
     "@strapi/strapi": "5.32.0",
     "fs-extra": "^10.0.0",
@@ -28,6 +28,7 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
+    "@strapi/plugin-cloud": "5.32.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -40,5 +41,6 @@
   "strapi": {
     "uuid": "dcf331b5-4f70-4f6b-bcb9-c1eea9f235d5",
     "installId": "a93fd96b409d7043557123d4f62cf9260e9340f68d229e04558cd1f98ad9d944"
-  }
+  },
+  "packageManager": "pnpm@10.18.3"
 }

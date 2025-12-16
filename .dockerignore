@@ -1,0 +1,57 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Environment variables
+.env*
+!.env.example
+
+# Development and test files
+.nyc_output
+coverage
+.nyc_output
+coverage/
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Logs
+logs
+*.log
+
+# Build outputs
+dist
+build
+
+# Temporary files
+tmp
+temp
+*.tmp
+*.temp
+
+# CLAUDE related
+.claude
+.claude-cache
+
+# Local config files
+*.local
+config.local.js
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets (if any)
+secrets/
+*.key
+*.pem
