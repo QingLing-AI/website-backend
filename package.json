@@ -41,7 +41,8 @@
   },
   "strapi": {
     "uuid": "dcf331b5-4f70-4f6b-bcb9-c1eea9f235d5",
-    "installId": "a93fd96b409d7043557123d4f62cf9260e9340f68d229e04558cd1f98ad9d944"
+    "installId": "a93fd96b409d7043557123d4f62cf9260e9340f68d229e04558cd1f98ad9d944",
+    "telemetryDisabled": true
   },
   "packageManager": "pnpm@10.18.3"
 }
