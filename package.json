@@ -9,6 +9,7 @@
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
+    "openapi": "strapi openapi generate --output ./public/swagger-spec.json",
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",

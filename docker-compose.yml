@@ -5,6 +5,8 @@ services:
     image: crpi-7x3cvpk5cndgayp8.cn-shenzhen.personal.cr.aliyuncs.com/qingling-ai/website-backend:latest
     ports:
       - "1337:1337"
+    volumes:
+      - ./uploads:/app/public/uploads
     environment:
       # 环境变量 - 可以通过 .env 文件或环境变量设置
       - NODE_ENV=production
