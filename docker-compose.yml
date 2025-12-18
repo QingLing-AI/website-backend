@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  website-ui:
+  backend:
     image: crpi-7x3cvpk5cndgayp8.cn-shenzhen.personal.cr.aliyuncs.com/qingling-ai/website-backend:latest
     ports:
       - "1337:1337"
@@ -10,7 +10,7 @@ services:
     environment:
       # 环境变量 - 可以通过 .env 文件或环境变量设置
       - NODE_ENV=production
-    env_file: .env
+    env_file: .env.backend
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "node", "-e", "require('http').get('http://localhost:1337', (res) => {process.exit(res.statusCode === 200 ? 0 : 1)});"]
@@ -18,3 +18,5 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
