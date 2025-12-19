@@ -1,6 +1,24 @@
-export default () => ({
+export default ({ env }) => ({
   sentry: {
     enabled: false, // completely disable Sentry plugin
+  },
+  email: {
+    config: {
+      provider: '@strapi/provider-email-nodemailer',
+      providerOptions: {
+        host: env('SMTP_HOST'),
+        port: env.int('SMTP_PORT', 465),
+        secure: env.int('SMTP_PORT', 465) === 465,
+        auth: {
+          user: env('SMTP_USER'),
+          pass: env('SMTP_PASSWORD'),
+        },
+      },
+      settings: {
+        defaultFrom: env('SMTP_FROM'),
+        defaultReplyTo: env('SMTP_REPLYTO'),
+      },
+    },
   },
   upload: {
     config: {
