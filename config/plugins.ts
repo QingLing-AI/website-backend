@@ -36,7 +36,7 @@ export default ({ env }) => ({
         xsmall: 64
       },
       security: {
-        allowedTypes: ['image/*', 'application/*'],
+        allowedTypes: ['image/*', 'video/*', 'application/*'],
         deniedTypes: ['application/x-sh', 'application/x-dosexec']
       },
     },
