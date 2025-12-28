@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: crpi-7x3cvpk5cndgayp8.cn-shenzhen.personal.cr.aliyuncs.com/qingling-ai/website-backend:latest
+    image: lshgdut/qingling-ai/website-backend:main
     ports:
       - "1337:1337"
     volumes:
@@ -13,7 +13,7 @@ services:
     env_file: .env.backend
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "node", "-e", "require('http').get('http://localhost:1337', (res) => {process.exit(res.statusCode === 200 ? 0 : 1)});"]
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:1337/admin', (res) => {process.exit(res.statusCode === 200 ? 0 : 1)});"]
       interval: 30s
       timeout: 10s
       retries: 3
